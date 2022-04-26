@@ -1,0 +1,49 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Ecommerce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=dev npx nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rsdjsp/NodeJS-Proyect3.git"
+  },
+  "author": "Robert Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rsdjsp/NodeJS-Proyect3/issues"
+  },
+  "homepage": "https://github.com/Rsdjsp/NodeJS-Proyect3#readme",
+  "dependencies": {
+    "@google-cloud/storage": "^5.18.2",
+    "axios": "^0.26.1",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "googleapis": "^95.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.4",
+    "mongoose-paginate-v2": "^1.6.3",
+    "multer": "^1.4.4",
+    "node-fecth": "^0.0.1-security",
+    "nodemailer": "^6.7.2",
+    "passport": "^0.5.2",
+    "passport-facebook": "^3.0.0",
+    "passport-github2": "^0.1.12",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-twitter": "^1.0.4",
+    "request": "^2.88.2",
+    "require": "^2.4.20",
+    "stripe": "^8.215.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

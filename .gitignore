@@ -1,2 +1,5 @@
+.env
 .env.local
+/credentials-gcloud.json
 /node_modules
+.response.json
