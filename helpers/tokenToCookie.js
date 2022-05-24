@@ -6,6 +6,7 @@ function tokenToCookie(res, newUser) {
       .cookie("token", "", {
         httpOnly: true,
         secure: true,
+        sameSite: "none",
         expires: new Date(),
       })
       .json({ loggedOut: true });

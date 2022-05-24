@@ -21,6 +21,11 @@ function cart(app) {
     const cart = await cartService.deleteProduct(req.body, req.user.cart);
     return res.status(200).json(cart);
   });
+  router.post("/update", validateToken, async (req, res) => {
+    const { amount, product } = req.body;
+    const cart = await cartService.update(req.user.cart, amount, product);
+    return res.status(200).json(cart);
+  });
 }
 
 module.exports = cart;

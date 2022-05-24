@@ -28,7 +28,7 @@ class Cart {
   async getAll(cartId) {
     const products = await CartModel.findById(cartId).populate(
       "products.product",
-      "name price"
+      "name price img"
     );
 
     return products;
@@ -45,6 +45,15 @@ class Cart {
       {
         $pull: { products: deleteProduct },
       }
+    );
+    return cart;
+  }
+
+  async update(idCart, amount, idProduct) {
+    const cart = await CartModel.updateOne(
+      { _id: idCart },
+      { $set: { "products.$[el].quantity": amount } },
+      { arrayFilters: [{ "el.product": idProduct }] }
     );
     return cart;
   }

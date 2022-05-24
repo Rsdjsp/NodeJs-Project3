@@ -18,7 +18,8 @@ class Auth {
 
   async getToken(user) {
     const token = jwt.sign(user.toJSON(), jwt_secret, { expiresIn: "1d" });
-    return { sucess: true, token };
+    user.password = undefined;
+    return { sucess: true, user, token };
   }
 
   async signUp(userData) {

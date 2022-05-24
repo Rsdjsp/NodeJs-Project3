@@ -20,6 +20,10 @@ function auth(app) {
   router.post("/logout", validateToken, (req, res) => {
     return tokenToCookie(res);
   });
+
+  router.get("/validate", validateToken, (req, res) => {
+    return res.json(req.user);
+  });
 }
 
 module.exports = auth;

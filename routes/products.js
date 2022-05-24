@@ -21,6 +21,23 @@ function products(app) {
     const results = await productService.getOne(req.params.id);
     return res.json(results);
   });
+
+  router.get("/bestSellers", async (req, res) => {
+    const results = await productService.bestSellers();
+    return res.json(results);
+  });
+  router.get("/offers", async (req, res) => {
+    const results = await productService.bestSellers();
+    return res.json(results);
+  });
+  router.get("/newCollection", async (req, res) => {
+    const results = await productService.bestSellers();
+    return res.json(results);
+  });
+  router.get("/liquidation", async (req, res) => {
+    const results = await productService.bestSellers();
+    return res.json(results);
+  });
 }
 
 module.exports = products;
